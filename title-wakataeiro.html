@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自己実現活動公開研究会</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    .pattern5 {
+      background: #fafafa;
+      padding: 70px 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .pattern5 .subtitle {
+      font-size: 1rem;
+      color: #666;
+      letter-spacing: 0.4em;
+      margin-bottom: 15px;
+      animation: fadeSlideDown 0.8s ease forwards;
+    }
+
+    .pattern5 .main-title {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #1a1a1a;
+      position: relative;
+      display: inline-block;
+    }
+
+    .pattern5 .main-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 0;
+      height: 6px;
+      background: #68be8d; /* 若竹色 */
+      animation: underlineExpand 1s ease 0.5s forwards;
+    }
+
+    @keyframes fadeSlideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes underlineExpand {
+      to { width: 100%; }
+    }
+
+    .pattern5 .event-info {
+      margin-top: 35px;
+      color: #555;
+      font-size: 1.15rem;
+      animation: fadeIn 0.8s ease-out 1.2s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="pattern5">
+    <p class="subtitle">東京学芸大学附属竹早園舎・竹早小学校</p>
+    <h1 class="main-title">自己実現活動公開研究会</h1>
+    <p class="event-info">2026年1月30日（金）</p>
+  </div>
+</body>
+</html>
