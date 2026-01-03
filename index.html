@@ -47,8 +47,29 @@
       left: 0;
       width: 0;
       height: 6px;
-      background: #68be8d; /* 若竹色 */
-      animation: underlineExpand 1s ease 0.5s forwards;
+      background: linear-gradient(
+        90deg,
+        #68be8d 0%,
+        #68be8d 40%,
+        #a8e6cf 50%,
+        #68be8d 60%,
+        #68be8d 100%
+      );
+      background-size: 200% 100%;
+      animation: 
+        underlineExpand 1s ease 0.5s forwards,
+        shimmer 3s ease-in-out 1.5s infinite,
+        pulse 4s ease-in-out 1.5s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 100% 0; }
+      100% { background-position: -100% 0; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
     }
 
     @keyframes fadeSlideDown {
@@ -76,16 +97,17 @@
     /* スマホ対応 */
     @media screen and (max-width: 600px) {
       .pattern5 {
-        padding: 40px 20px;
+        padding: 30px 15px;
       }
 
       .pattern5 .subtitle {
-        font-size: 0.75rem;
-        letter-spacing: 0.2em;
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 12px;
       }
 
       .pattern5 .main-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
       }
 
       .pattern5 .main-title::after {
@@ -94,8 +116,8 @@
       }
 
       .pattern5 .event-info {
-        margin-top: 25px;
-        font-size: 0.9rem;
+        margin-top: 20px;
+        font-size: 0.85rem;
       }
     }
   </style>
