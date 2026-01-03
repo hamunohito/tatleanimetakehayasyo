@@ -72,6 +72,32 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+
+    /* スマホ対応 */
+    @media screen and (max-width: 600px) {
+      .pattern5 {
+        padding: 40px 20px;
+      }
+
+      .pattern5 .subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+      }
+
+      .pattern5 .main-title {
+        font-size: 1.8rem;
+      }
+
+      .pattern5 .main-title::after {
+        height: 4px;
+        bottom: -5px;
+      }
+
+      .pattern5 .event-info {
+        margin-top: 25px;
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 <body>
